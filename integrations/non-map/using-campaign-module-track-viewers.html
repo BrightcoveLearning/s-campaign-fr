@@ -1,64 +1,55 @@
 <article class="bcls-article">
-    <h1>{{ page.title }}</h1>
-    <summary>{{ page.description }}</summary>
-    <section class="bcls-section">
-      <p>The Campaign module provides the ability to track viewing activity. In this scenario, viewing data is not sent to a marketing automation platform. One common use case for this would be internal training videos. Campaign tracking can be used to track the viewing activity of internal employees. The Campaign Module will store up to 500K event views per connection. Once the limit has been reached, it will start purging old events.</p>
-      <p>To use Campaign tracking, the following steps are required:</p>
+    <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section">
+      <p>Le module Campaign permet de suivre l'activité de visionnage. Dans ce scénario, les données de visionnage ne sont pas envoyées à une plateforme d'automatisation du marketing. Un cas d'utilisation courant pour cela serait les vidéos de formation internes. Le suivi des campagnes peut être utilisé pour suivre l'activité de visionnage des employés internes. Le module Campaign stockera jusqu'à 500 000 vues d'événements par connexion. Une fois la limite atteinte, il commencera à purger les anciens événements.</p>
+      <p>Pour utiliser le suivi des campagnes, les étapes suivantes sont nécessaires:</p>
       <ol>
-        <li><a href="#enable">Configure the Campaign tracking settings</a></li>
-        <li><a href="#configure">Configure a player and lead form for Campaign tracking</a></li>
-        <li><a href="#viewdata">View video data</a></li>
-      </ol>
-    </section>
-    <section class="bcls-section">
-      <h2 id="enable">Configuring the Campaign tracking settings</h2>
-      <p>To configure the Campaign tracking settings, follow these steps:</p>
+        <li><a href="#enable">Configuration des paramètres de suivi de la campagne</a></li>
+        <li><a href="#configure">Configuration d'un formulaire de lecteur
+ et de prospect pour le suivi des campagnes</a></li>
+        <li><a href="#viewdata">Afficher les données vidéo</a></li>
+      </ol>  </section><section class="bcls-section">
+      <h2 id="enable">Configuration des paramètres de suivi des campagnes</h2>
+      <p>Pour configurer les paramètres de suivi de la campagne, procédez comme suit:</p>
       <ol class="bcls-tasklist-restart">
-        <li>Open the <strong>Campaign</strong> module.</li>
-        <li>In the left navigation,  click <strong>Data Connections</strong>.</li>
-        <li>Locate the <strong>Campaign Tracking</strong> section and click <span class="button-blue">Show</span>.</li>
-        <li>By default, Campaign tracking is enabled for all accounts. Edit the settings as needed:
+        <li>Ouvrez le<strong> module</strong> Campaign.</li>
+        <li>Dans la navigation de gauche, cliquez sur Connexions de<strong> données</strong>.</li>
+        <li>Localisez la<strong> section Suivi des</strong> campagnes et cliquez sur<span class="button-blue"> Afficher</span>.</li>
+        <li>Par défaut, le suivi des campagnes est activé pour tous les comptes. Modifiez les paramètres selon vos besoins:
           <ul>
-            <li><strong>Connection Name</strong> - Identifies the connection</li>
-            <li><strong>Connection Status</strong> - Determines if Video Cloud video engagement data is saved by the Campaign module.
+            <li><strong>Nom de la connexion</strong>: identifie la connexion</li>
+            <li><strong>État de la connexion</strong>: détermine si les données d'engagement vidéo de Video Cloud sont enregistrées par le module Campaign.
               <ul>
-                <li><strong>Enabled</strong> - Data is collected</li>
-                <li><strong>Disabled</strong> - No data is collected (connection is disabled)</li>
+                <li><strong>Activé</strong> - Les données sont collectées</li>
+                <li><strong>Désactivé</strong> - Aucune donnée n'est collectée (la connexion est désactivée)</li>
               </ul>
             </li>
-            <li><strong>Track Data for Unknown Viewers</strong> - Determines if tracking data is recorded for unknown viewers. To identify viewers when using Campaign tracking, an <a href="/campaign/general/creating-campaign-lead-form.html">Campaign lead form</a> can be used.
-              <aside class="bcls-aside bcls-aside--information">Note: With Campaign tracking, up to 1,000 viewers will be tracked per 24 hour period.</aside>
+            <li><strong>Track Data for Unknown Viewers</strong> - Détermine si les données de suivi sont enregistrées pour des spectateurs inconnus. Pour identifier les spectateurs lors de l'utilisation du suivi de<a href="/campaign/general/creating-campaign-lead-form.html"> campagne, un formulaire de prospect de campagne</a> peut être utilisé. <aside class="bcls-aside bcls-aside--information">Remarque: Avec le suivi des campagnes, jusqu'à 1 000 spectateurs seront suivis par période de 24 heures.</aside>
             </li>
-            <li><strong>How long should Brightcove retain data?</strong> - The data retention policy determines how long the viewing data and lead form data (if using a Campaign lead form) will be retained in your Video Cloud account. You should adjust the retention settings according to your privacy policy - it is not required to retain any user data in Video Cloud.</li>
+            <li><strong>Pendant combien de temps Brightcove doit-elle conserver les données&nbsp;? </strong>- La politique de conservation des données détermine la durée pendant laquelle les données de visionnage et les données du formulaire de prospect (si vous utilisez un formulaire de prospect Campaign) seront conservées dans votre compte Video Cloud. Vous devez ajuster les paramètres de conservation conformément à votre politique de confidentialité. Il n'est pas nécessaire de conserver les données utilisateur dans Video Cloud.</li>
           </ul>
         </li>
-      </ol>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="enable tracking" src="/assets/images/s-campaign-img/general/node18347-campaign-tracking.png" /></figure>
-    </section>
-    <section class="bcls-section">
-      <h2 id="configure">Configuring a player and lead form for Campaign tracking</h2>
-      <p>Viewing activity can only be tracked when videos are viewed inside of a Campaign-enabled video player. You must use a Campaign-enabled player when using Campaign Tracking. Lead forms can be displayed during video playback to capture viewer information. Lead forms are not required when using Campaign tracking.</p>
-      <p>To configure Campaign Tracking with a Campaign-enabled player and lead form, follow these steps:</p>
+      </ol> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="activer le suivi" src="/assets/images/s-campaign-img/general/node18347-campaign-tracking.png" /></figure>  </section><section class="bcls-section">
+      <h2 id="configure">Configuration d'un formulaire de lecteur
+ et de prospect pour le suivi des campagnes</h2>
+      <p>L'activité de visionnage ne peut être suivie que lorsque les vidéos sont visionnées dans un lecteur vidéo compatible avec la campagne. Vous devez utiliser un lecteur compatible avec la campagne lorsque vous utilisez le suivi de campagne. Les formulaires de prospects peuvent être affichés pendant la lecteur de la vidéo pour capturer les informations du spectateur. Les formulaires de prospects ne sont pas nécessaires lorsque vous utilisez le suivi de campagne.</p>
+      <p>Pour configurer le suivi des campagnes avec un lecteur compatible avec la campagne et un formulaire de prospects, procédez comme suit:</p>
       <ol class="bcls-tasklist-restart">
-        <li>Click <strong>Campaign Players</strong> in the left navigation.</li>
-        <li>Determine which Campaign-enabled player to use. If no Campaign-enabled players exist, click <span class="button-blue">Create Player</span> to create one. For more information on creating Campaign-enabled players, see <a href="/campaign/general/creating-campaign-enabled-player.html">Creating a Campaign-enabled Player</a>.</li>
-        <li>While a lead form is not required, lead forms can be used to collect information about the viewer and turn anonymous viewers into known viewers. Click <strong>Lead Forms</strong> and create a lead form. For more information on creating lead forms, see <a href="/campaign/general/creating-campaign-lead-form.html">Creating a Campaign Lead Form</a>.</li>
-        <li>Click <strong>Campaign Players</strong>.</li>
-        <li>Locate the Campaign-enabled player to use. Set the <strong>Connect To</strong> value for the player to <strong>Campaign Tracking</strong>.</li>
-        <li>If a lead form is being used, select the lead form from the <strong>Lead Form</strong> dropdown list.
-          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="new player" src="/assets/images/s-campaign-img/general/node18347-player-lead-form.png" /></figure>
+        <li>Cliquez sur Joueurs de<strong> campagne</strong> dans le menu de navigation de gauche.</li>
+        <li>Déterminez le lecteur compatible avec la campagne à utiliser. S'il n'existe aucun lecteur compatible avec la campagne, cliquez sur<span class="button-blue"> Créer un lecteur</span> pour en créer un. Pour plus d'informations sur la création de lecteurs compatibles avec la campagne, consultez<a href="/campaign/general/creating-campaign-enabled-player.html"> Création d'un lecteur compatible avec la campagne</a>.</li>
+        <li>Bien qu'un formulaire de prospect ne soit pas requis, les formulaires de prospects peuvent être utilisés pour collecter des informations sur le spectateur et transformer des spectateurs anonymes en spectateurs connus. Cliquez sur<strong> Lead Forms</strong> et créez un formulaire pour prospects. Pour plus d'informations sur la création de formulaires de prospects, voir<a href="/campaign/general/creating-campaign-lead-form.html"> Création d'un formulaire de prospect de campagne</a>.</li>
+        <li>Cliquez sur<strong> Campaign Players</strong>.</li>
+        <li>Localisez le lecteur compatible avec la campagne à utiliser. Définissez la<strong> valeur</strong> Se connecter à pour le lecteur
+ sur Suivi de<strong> campagne</strong>.</li>
+        <li>Si un formulaire de prospect est utilisé, sélectionnez-le dans la liste<strong> déroulante</strong> Lead Form. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="nouveau lecteur
+" src="/assets/images/s-campaign-img/general/node18347-player-lead-form.png" /></figure>
         </li>
-      </ol>
-    </section>
-    <section class="bcls-section">
-      <h2 id="viewdata">Viewing video data</h2>
-      <p>There are several options available for viewing video data when using Campaign Tracking:</p>
+      </ol>  </section><section class="bcls-section">
+      <h2 id="viewdata">Visualisation des données vidéo</h2>
+      <p>Plusieurs options sont disponibles pour visualiser les données vidéo lors de l'utilisation du suivi de campagne:</p>
       <ul>
-        <li><strong>Viewer Activities (Events)</strong> - Provided as part of the Campaign module, this option can be used to view video data inside the Campaign module. For information, see <a href="/campaign/general/viewing-player-events-campaign-module.html">Viewing Player Events in the Campaign Module</a>.</li>
-        <li><strong>Viewer Profiles</strong> - Provided as part of the Campaign module, this option can be used to view video data based upon a user profile value inside the Campaign module. For information, see <a href="/campaign/general/viewing-viewer-profile-information.html">Viewing Viewer Profile Information</a>.</li>
-        <li><strong>Export Data</strong> - Provided as part of the Campaign module, this option can be used to export video view and lead data. For information, see <a href="/campaign/admin/exporting-campaign-data-campaign-module.html">Exporting Campaign Data from the Campaign Module</a>.</li>
-        <li><strong>Audience API</strong> - The Audience API can be used to programmatically retrieve video view and lead data. For information, see <a href="/campaign/develop/overview-audience-api.html">Overview: Audience API</a>.</li>
-      </ul>
-    </section>
-  </article>
-  
+        <li><strong>Viewer Activities (Events)</strong> - Fourni dans le cadre du module Campaign, cette option peut être utilisée pour afficher les données vidéo dans le module Campaign. Pour plus d'informations, consultez la section<a href="/campaign/general/viewing-player-events-campaign-module.html"> Affichage des événements des lecteur
+s dans le module Campaign</a>.</li>
+        <li><strong>Profils des spectateurs</strong> - Fourni dans le cadre du module Campaign, cette option peut être utilisée pour afficher les données vidéo en fonction d'une valeur de profil utilisateur dans le module Campaign. Pour plus d'informations, consultez la section<a href="/campaign/general/viewing-viewer-profile-information.html"> Affichage des informations sur</a> le profil</li>
+        <li><strong>Exporter les données</strong> - Fourni dans le cadre du module Campaign, cette option peut être utilisée pour exporter les données de visionnage de vidéos et de prospects. Pour plus d'informations, voir<a href="/campaign/admin/exporting-campaign-data-campaign-module.html"> Exportation des données de campagne à partir du module Campaign</a>.</li>
+        <li><strong>API Audience</strong> - L'API Audience peut être utilisée pour récupérer par programme les données de visionnage de vidéos et de prospects. Pour plus d'informations, voir<a href="/campaign/develop/overview-audience-api.html"> Vue d'ensemble: API Audience</a>.</li>
+      </ul>   </section></article>

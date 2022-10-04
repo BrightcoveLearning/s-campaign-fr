@@ -1,89 +1,72 @@
 <article class="bcls-article">
-    <h1>{{ page.title }}</h1>
-    <summary>{{ page.description }}</summary>
-    <section class="bcls-section">
-      <p>The Campaign module provides the ability to create custom lead forms which allow you to capture viewer information as videos are played inside of Brightcove players. The lead data is sent to, and processed by, Salesforce.</p>
-      <p>To create a custom lead form, the following steps must be performed.</p>
+    <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section">
+      <p>Le module Campaign permet de créer des formulaires de prospects personnalisés qui vous permettent de capturer des informations sur les spectateurs au fur et à mesure que les vidéos sont lues dans les lecteurs Brightcove. Les données des prospects sont envoyées et traitées par Salesforce.</p>
+      <p>Pour créer un formulaire de prospects personnalisé, les étapes suivantes doivent être effectuées.</p>
       <ol>
-        <li><a href="#form">Create a form in Salesforce</a></li>
-        <li><a href="#edit">Copy and edit the form HTML</a></li>
-        <li><a href="#leadform">Create a custom lead form in the Campaign module</a></li>
-        <li><a href="#player">Assign the lead form to a player</a></li>
-        <li><a href="#formdata">Validate the form data in Salesforce</a></li>
-      </ol>
-      <aside class="bcls-aside bcls-aside--information">Note: For information on standard lead forms which capture viewer information and save the data in Video Cloud, see <a href="/campaign/general/creating-campaign-lead-form.html">Creating a Campaign Lead Form</a>.</aside>
-    </section>
-    <section class="bcls-section">
-      <h2 id="form">Creating a form in Salesforce</h2>
-      <p>The Web-to-Lead feature in Salesforce can be used to generate lead information from website visitors. These forms can also be displayed inside of Brightcove players. The steps below will create a simple form to capture first name, last name, email address, company, city and state/province. For complete details on the Web-to-Lead feature, see the <a href="https://help.salesforce.com/apex/HTViewHelpDoc?id=setting_up_web-to-lead.htm&amp;language=en">Salesforce documentation</a>.</p>
+        <li><a href="#form">Création d'un formulaire dans Salesforce</a></li>
+        <li><a href="#edit">Copiez et modifiez le HTML du formulaire</a></li>
+        <li><a href="#leadform">Créer un formulaire personnalisé pour les prospects dans le module Campaign</a></li>
+        <li><a href="#player">Attribuer le formulaire de lead à un lecteur
+</a></li>
+        <li><a href="#formdata">Valider les données du formulaire dans Salesforce</a></li>
+      </ol> <aside class="bcls-aside bcls-aside--information">Remarque: Pour plus d'informations sur les formulaires de prospects standard qui capturent les informations des spectateurs et enregistrent les données dans Video Cloud, voir<a href="/campaign/general/creating-campaign-lead-form.html"> Création d'un formulaire de prospect de campagne</a>.</aside> </section> <section class="bcls-section">
+      <h2 id="form">Création d'un formulaire dans Salesforce</h2>
+      <p>La fonctionnalité Web-to-Lead de Salesforce peut être utilisée pour générer des informations sur les prospects auprès des visiteurs du site Web. Ces formulaires peuvent également être affichés dans les lecteurs Brightcove. Les étapes ci-dessous créeront un formulaire simple pour saisir le prénom, le nom, l'adresse e-mail, la société, la ville et l'état/la province. Pour plus de détails sur la fonctionnalité Web-to-Lead, consultez la documentation<a href="https://help.salesforce.com/apex/HTViewHelpDoc?id=setting_up_web-to-lead.htm&amp;language=en"> Salesforce</a>.</p>
       <ol class="bcls-tasklist-restart">
-        <li>Login to your Salesforce account.</li>
-        <li>From <strong>Setup</strong>, enter <code translate="No">Web-to-Lead</code> in the Quick Find box and then click <strong>Web-to-Lead</strong>.</li>
-        <li>Click <strong>Create Web-to-Lead Form</strong>.</li>
-        <li>Select fields to include on your Web-to-Lead form. Use the Add and Remove arrows to move fields between the <strong>Available Fields</strong> list and the <strong>Selected Fields</strong> list, and use the Up and Down arrows to change the order of the fields on your form.
-  <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-campaign-img/integrations/salesforce/node16132-lead-setup.png" /></figure>
+        <li>Connectez-vous à votre compte Salesforce.</li>
+        <li>Dans<strong> Configuration</strong>, saisissez<code translate="No"> Web-to-Lead</code> dans la case Recherche rapide, puis cliquez sur<strong> Web-to-Lead</strong>.</li>
+        <li>Cliquez sur<strong> Créer un formulaire Web-to-Lead</strong>.</li>
+        <li>Sélectionnez les champs à inclure dans votre formulaire Web-to-Lead. Utilisez les flèches Ajouter et Supprimer pour déplacer les champs entre la<strong> liste Champs</strong> disponibles et la<strong> liste Champs</strong> sélectionnés, et utilisez les flèches Haut et Bas pour modifier l'ordre des champs de votre formulaire. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-campaign-img/integrations/salesforce/node16132-lead-setup.png" /></figure>
         </li>
-        <li>Enter a <strong>Return URL</strong>. For this example, the Return URL will be set to http://www.brightcove.com. This value will be ignored when the form is used as a custom lead form inside of the Campaign module.</li>
-        <li>Click <strong>Generate</strong>. The form HTML will be displayed.</li>
-      </ol>
-    </section>
-    <section class="bcls-section">
-      <h2 id="edit">Copying and editing the form HTML</h2>
-      <p>To use the form inside of the Campaign module, you will need to copy the form HTML. Also, you may want to do some basic styling to the form. In the steps below, we will copy the form HTML to an HTML editor and then make some styling changes to the form.</p>
-      <p>By default, when the form is displayed inside of a Brightcove player, the form will display on a transparent background over the player. Use CSS to set the background color.</p>
+        <li>Saisissez une URL<strong> de retour</strong>. Pour cet exemple, l'URL de retour sera définie sur http://www.brightcove.com. Cette valeur est ignorée lorsque le formulaire est utilisé comme formulaire personnalisé pour les prospects dans le module Campaign.</li>
+        <li>Cliquez sur<strong> Générer</strong>. Le code HTML du formulaire s'affiche.</li>
+      </ol>  </section><section class="bcls-section">
+      <h2 id="edit">Copier et modifier le HTML du formulaire</h2>
+      <p>Pour utiliser le formulaire dans le module Campaign, vous devez copier le formulaire HTML. En outre, vous voudrez peut-être appliquer un style de base au formulaire. Dans les étapes ci-dessous, nous copierons le code HTML du formulaire dans un éditeur HTML, puis apporterons quelques modifications de style au formulaire.</p>
+      <p>Par défaut, lorsque le formulaire est affiché à l'intérieur d'un lecteur Brightcove, il s'affiche sur un fond transparent au-dessus du lecteur. Utilisez CSS pour définir la couleur d'arrière-plan.</p>
       <ol class="bcls-tasklist-restart">
-        <li>Copy the HTML to the clipboard.
-          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-campaign-img/integrations/salesforce/node16132-lead-form-html.png" /></figure>
+        <li>Copiez le code HTML dans le presse-papiers. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-campaign-img/integrations/salesforce/node16132-lead-form-html.png" /></figure>
         </li>
-        <li>Click <strong>Finished</strong>.</li>
-        <li>Paste the form HTML into your HTML editor of choice. You may want to use the code formatting feature of your editor to format the code so that it is easier to read.</li>
-        <li>Using your HTML editor, add the following CSS to change the background color to grey.<br />
-          <code translate="No">&lt;style&gt;<br />
-          body {<br />
-          background-color: rgba(204,204,204,0.9);<br />
-          margin: 0;<br />
-          padding: 20px;<br />
-          height: 100%;<br />
+        <li>Cliquez sur<strong> Terminé</strong>.</li>
+        <li>Collez le code HTML du formulaire dans l'éditeur HTML de votre choix. Vous pouvez utiliser la fonctionnalité de mise en forme du code de votre éditeur pour formater le code afin qu'il soit plus facile à lire.</li>
+        <li>À l'aide de votre éditeur HTML, ajoutez le CSS suivant pour changer la couleur d'arrière-plan en gris.<br /> <code translate="No">&lt;style&gt;<br />
+          corps {<br />
+          couleur d'arrière-plan: RGBA (204, 204, 204, 0,9)&nbsp;;<br />
+          marge: 0&nbsp;;<br />
+          rembourrage: 20px&nbsp;;<br />
+          hauteur: 100&nbsp;%&nbsp;;<br />
           }<br />
-          &lt;/style&gt;</code></li>
-        <li>(Optional) To identify which leads are generated by Campaign, the following code can be added inside the <code translate="No">&lt;form&gt;</code> tag:<br />
-          <code translate="No">&lt;input type="hidden" name="lead_source" value="Video Cloud Campaign"&gt;</code></li>
-        <li>Copy the HTML to the clipboard.</li>
-      </ol>
-    </section>
-    <section class="bcls-section">
-      <h2 id="leadform">Creating a custom lead form in the Campaign module</h2>
-      <p>Once the form HTML has been generated in Salesforce, create a custom lead form in the Campaign module and associate the lead form with a Campaign-enabled player.</p>
+          &lt;/style &gt;</code></li>
+        <li>(Facultatif) Pour identifier les prospects générés par Campaign, le code suivant peut être ajouté dans la<code translate="No"> balise </code>&lt;form&gt;:<br /> <code translate="No">&lt;input type=&quot;hidden-fr/ name=&quot;lead_source-fr/ value=&quot;Campagne Video Cloud&quot;&gt;</code></li>
+        <li>Copiez le code HTML dans le presse-papiers.</li>
+      </ol>  </section><section class="bcls-section">
+      <h2 id="leadform">Création d'un formulaire de prospect personnalisé dans le module Campaign</h2>
+      <p>Une fois que le code HTML du formulaire a été généré dans Salesforce, créez un formulaire de prospect personnalisé dans le module Campaign et associez le formulaire de prospect à un lecteur compatible avec la campagne.</p>
       <ol class="bcls-tasklist-restart">
-        <li>Open the <strong>Campaign</strong> module.</li>
-        <li>Click <strong>Lead Forms</strong> in the left navigation. If any lead forms have been created, they will be displayed.</li>
-        <li>Click <span class="button-blue">Create Lead Form</span>.</li>
-        <li>Give the lead form a descriptive <strong>Name</strong>.</li>
-        <li>Select a <strong>Form Language</strong>.</li>
-        <li>Select the <strong>Form Timing</strong>. The form timing determines when the lead form will be displayed.
-          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="edit lead form (1)" src="/assets/images/s-campaign-img/integrations/salesforce/node16132-edit-lead-form-1.png" /></figure>
+        <li>Ouvrez le<strong> module</strong> Campaign.</li>
+        <li>Cliquez sur<strong> Lead Forms</strong> dans la navigation de gauche. Si des formulaires de prospects ont été créés, ils seront affichés.</li>
+        <li>Cliquez sur<span class="button-blue"> Créer un formulaire de prospects</span>.</li>
+        <li>Donnez un<strong> nom descriptif au formulaire de prospect</strong>.</li>
+        <li>Sélectionnez une langue<strong> de formulaire</strong>.</li>
+        <li>Sélectionnez la synchronisation du<strong> formulaire</strong>. La synchronisation du formulaire détermine le moment où le formulaire de prospect sera affiché. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="modifier le formulaire de prospect (1)" src="/assets/images/s-campaign-img/integrations/salesforce/node16132-edit-lead-form-1.png" /></figure>
         </li>
-        <li>Set the form type to <strong>Custom Lead Form</strong>.</li>
-        <li>Paste in the <strong>Form HTML</strong> from Salesforce.</li>
-        <li><strong>(Optional)</strong> Paste in the <strong>Confirmation HTML</strong>. The confirmation view will be display for 5 seconds and then the video will resume playing. If no confirmation HTML is included, the video will resume playing after the form submission.
-          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="edit lead form (2)" src="/assets/images/s-campaign-img/integrations/salesforce/node16132-edit-lead-form-2.png" /></figure>
+        <li>Définissez le type de formulaire<strong> sur Custom Lead Form</strong>.</li>
+        <li>Collez le code HTML du<strong> formulaire</strong> depuis Salesforce.</li>
+        <li><strong>(Facultatif)</strong> Collez le code HTML<strong> de confirmation</strong>. La vue de confirmation s'affiche pendant 5 secondes, puis la lecteur de la vidéo reprend. Si aucun code HTML de confirmation n'est inclus, la lecteur de la vidéo reprendra après l'envoi du formulaire. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="modifier le formulaire de prospect (2)" src="/assets/images/s-campaign-img/integrations/salesforce/node16132-edit-lead-form-2.png" /></figure>
         </li>
-        <li><strong>(Optional)</strong> Click <span class="button-blue">Preview Form</span> to open a preview of the form.</li>
-        <li>Click <span class="button-blue">Save</span> to save the lead form.</li>
-      </ol>
-    </section>
-    <section class="bcls-section">
-      <h2 id="player">Assigning a lead form to a player</h2>
-      <p>Once the lead form has been created, it needs to be assigned to a player. Follow these steps to assign a lead form to a player.</p>
+        <li><strong>(Facultatif)</strong> Cliquez sur<span class="button-blue"> Aperçu du formulaire</span> pour ouvrir un aperçu du formulaire.</li>
+        <li>Cliquez sur<span class="button-blue"> Enregistrer</span> pour enregistrer le formulaire de prospect.</li>
+      </ol>  </section><section class="bcls-section">
+      <h2 id="player">Attribuer un formulaire de prospect à un lecteur
+</h2>
+      <p>Une fois le formulaire de lead créé, il doit être attribué à un lecteur
+. Suivez ces étapes pour attribuer un formulaire de prospect à un lecteur
+.</p>
       <ol class="bcls-tasklist-restart">
-        <li>Click <strong>Campaign Players</strong> in the left navigation.</li>
-        <li>Locate your player and use the <strong>Lead Form</strong> dropdown list to select the lead form.</li>
+        <li>Cliquez sur Joueurs de<strong> campagne</strong> dans le menu de navigation de gauche.</li>
+        <li>Localisez votre lecteur
+ et utilisez la liste<strong> déroulante</strong> Lead Form pour sélectionner le formulaire de lead.</li>
       </ol>
-      <p>The setup is now complete and you are ready to capture lead information. When a video is published using a Campaign-enabled player, the lead form will appear according to the form timing settings.</p>
-    </section>
-    <section class="bcls-section">
-      <h2 id="formdata">Validating the form data in Salesforce</h2>
-      <p>Leads captured using the custom lead form will be added as leads in your Salesforce account.</p>
-    </section>
-  </article>
-  
+      <p>La configuration est maintenant terminée et vous êtes prêt à saisir les informations sur les prospects. Lorsqu'une vidéo est publiée à l'aide d'un lecteur compatible avec la campagne, le formulaire de prospect apparaît en fonction des paramètres de chronométrage du formulaire.</p>  </section><section class="bcls-section">
+      <h2 id="formdata">Validation des données de formulaire dans Salesforce</h2>
+      <p>Les prospects capturés à l'aide du formulaire de prospects personnalisé seront ajoutés en tant que prospects dans votre compte Salesforce.</p>   </section></article>

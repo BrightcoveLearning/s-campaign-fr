@@ -1,51 +1,41 @@
 <article class="bcls-article">
-    <h1>{{ page.title }}</h1>
-    <summary>{{ page.description }}</summary>
-    <section class="bcls-section">
-      <p>The Campaign module provides the ability to add a Video Cloud video to Eloqua landing pages as a type of Cloud Content. Video is added to a landing page from within the Eloqua Landing Page WYSIWYG Editor.</p>
-      <p>To add a video to an Eloqua landing page, the following steps must be performed.</p>
+    <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section">
+      <p>Le module Campaign permet d'ajouter une vidéo Video Cloud aux pages de destination Eloqua en tant que type de contenu Cloud. La vidéo est ajoutée à une page de destination depuis l'éditeur WYSIWYG de la page de destination Eloqua.</p>
+      <p>Pour ajouter une vidéo à une page d'accueil Eloqua, les étapes suivantes doivent être effectuées.</p>
       <ol>
-        <li><a href="#landingpage">Create a landing page in Eloqua</a></li>
-        <li><a href="#video">Select a video and player</a></li>
-      </ol>
-    </section>
-    <section class="bcls-section">
-      <h2 id="landingpage">Creating an Eloqua landing page</h2>
-      <p>Eloqua landing pages can be used as a destination for visitors who clickthrough from emails sent from Eloqua. To create a landing page, follow these steps.</p>
-      <aside class="bcls-aside bcls-aside--information">Note: For complete information on Eloqua landing pages, see the <a href="https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/LandingPages/LandingPages.htm">Oracle Eloqua documentation</a>.</aside>
+        <li><a href="#landingpage">Créer une page de destination dans Eloqua</a></li>
+        <li><a href="#video">Sélectionnez une vidéo et un lecteur</a></li>
+      </ol>  </section><section class="bcls-section">
+      <h2 id="landingpage">Création d'une page de destination Eloqua</h2>
+      <p>Les pages de destination Eloqua peuvent être utilisées comme destination pour les visiteurs qui cliquent sur les e-mails envoyés par Eloqua. Pour créer une page de destination, procédez comme suit.</p> <aside class="bcls-aside bcls-aside--information">Remarque: Pour obtenir des informations complètes sur les pages de destination Eloqua, consultez la documentation<a href="https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/LandingPages/LandingPages.htm"> Oracle Eloqua</a>.</aside>
       <ol class="bcls-tasklist-restart">
-        <li>Login to your Video Cloud account. Select the account that has the video you want to use on the landing page. This account must also have access to the Campaign module.</li>
-        <li>Login to your Eloqua account.</li>
-        <li>Navigate to <strong>Assets</strong> &gt; <strong>Landing Pages</strong> and then click <strong>Create a Landing Page</strong>.</li>
-        <li>Click <strong>Blank HTML Landing Page</strong> and then click <strong>Choose</strong>.</li>
-        <li>In the left navigation, click <strong>Cloud Content</strong>. The Cloud Content dialog will open.
-          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-campaign-img/integrations/eloqua/node16128-cloud-content.png" /></figure>
+        <li>Connectez-vous à votre compte Video Cloud. Sélectionnez le compte sur lequel figure la vidéo que vous souhaitez utiliser sur la page de destination. Ce compte doit également avoir accès au module Campaign.</li>
+        <li>Connectez-vous à votre compte Eloqua.</li>
+        <li>Accédez à<strong> Ressources</strong> &gt; Pages de<strong> destination,</strong> puis cliquez sur<strong> Créer une page de destination</strong>.</li>
+        <li>Cliquez sur Page de destination HTML<strong> vierge,</strong> puis sur<strong> Choisir</strong>.</li>
+        <li>Dans le volet de navigation de gauche, cliquez sur<strong> Cloud Content</strong>. La boîte de dialogue Cloud Content s'ouvre. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-campaign-img/integrations/eloqua/node16128-cloud-content.png" /></figure>
         </li>
-        <li>Drag the <strong>Brightcove Video</strong> object to the HTML page and drop it between the <code translate="No">&lt;body&gt;</code> tags.
-          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-campaign-img/integrations/eloqua/node16128-drag-cloud-content.png" /></figure>
-          <aside class="bcls-aside bcls-aside--information">Note: Multiple players can be added to a landing page by dragging and dropping a player between the <code translate="No">&lt;body&gt;</code> tags. Save the landing page after adding each player.</aside>
+        <li>Faites glisser l'<strong>objet</strong> Brightcove Video sur la page HTML et déposez-le entre les<code translate="No"> balises </code>&lt;body &gt;. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-campaign-img/integrations/eloqua/node16128-drag-cloud-content.png" /></figure> <aside class="bcls-aside bcls-aside--information">Remarque: Plusieurs lecteur
+s peuvent être ajoutés à une page de destination en faisant glisser et en déposant un lecteur
+ entre les<code translate="No"> balises </code>&lt;body &gt;. Enregistrez la page de destination après avoir ajouté chaque lecteur
+.</aside>
         </li>
       </ol>
-      <p>The <strong>Cloud Content Configuration</strong> dialog will open where you can <a href="#video">select a video and player</a>.</p>
-    </section>
-    <section class="bcls-section">
-      <h2 id="video">Selecting a video and player</h2>
-      <p>The Cloud Content Configuration dialog is used to select a Video Cloud account, video and player.</p>
+      <p>La boîte de<strong> dialogue</strong> Cloud Content Configuration s'ouvre et vous permet de<a href="#video"> sélectionner une vidéo et un lecteur</a>.</p>  </section><section class="bcls-section">
+      <h2 id="video">Sélection d'une vidéo et d'un lecteur</h2>
+      <p>La boîte de dialogue Cloud Content Configuration permet de sélectionner un compte, une vidéo et un lecteur Video Cloud.</p>
       <ol class="bcls-tasklist-restart">
-        <li>Use the dropdown list in the upper right to select the Video Cloud account to use. After an account is selected, the dialog will update to display the videos and players from the selected account.</li>
-        <li>Select a video to display on the landing page. The 20 most recent videos will appear in the list.
-          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-campaign-img/integrations/eloqua/node16128-select-video.png" /></figure>
+        <li>Utilisez la liste déroulante en haut à droite pour sélectionner le compte Video Cloud à utiliser. Une fois qu'un compte est sélectionné, la boîte de dialogue s'actualise pour afficher les vidéos et les lecteurs du compte sélectionné.</li>
+        <li>Sélectionnez une vidéo à afficher sur la page de destination. Les 20 vidéos les plus récentes apparaîtront dans la liste. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-campaign-img/integrations/eloqua/node16128-select-video.png" /></figure>
         </li>
-        <li>Select a player to use. Only Campaign-enabled players will appear.</li>
-        <li>Set the <strong>Player Size</strong>.</li>
-        <li>Click <strong>Save</strong> to save the changes.</li>
-        <li>Click <strong>X</strong> to close the Cloud Content Configuration dialog. The HTML will update with the code to embed the player.
-          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-campaign-img/integrations/eloqua/node16128-html.png" /></figure>
+        <li>Sélectionnez un lecteur
+ à utiliser. Seuls les lecteur
+s ayant activé la campagne apparaîtront.</li>
+        <li>Définissez la taille du<strong> lecteur</strong>.</li>
+        <li>Cliquez sur<strong> Enregistrer</strong> pour enregistrer les modifications.</li>
+        <li>Cliquez sur<strong> X</strong> pour fermer la boîte de dialogue Cloud Content Configuration. Le code HTML sera mis à jour avec le code pour intégrer le lecteur. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-campaign-img/integrations/eloqua/node16128-html.png" /></figure>
         </li>
-        <li><strong>(Optional)</strong> Add other objects to the landing page.</li>
-        <li>Click <strong>Save</strong> to save the landing page.</li>
-        <li>Give the landing page a name and then click <strong>Save</strong>.</li>
-      </ol>
-    </section>
-  </article>
-  
+        <li><strong>(Facultatif)</strong> Ajoutez d'autres objets à la page de destination.</li>
+        <li>Cliquez sur<strong> Enregistrer</strong> pour enregistrer la page de destination.</li>
+        <li>Donnez un nom à la page de destination, puis cliquez sur<strong> Enregistrer</strong>.</li>
+      </ol>   </section></article>

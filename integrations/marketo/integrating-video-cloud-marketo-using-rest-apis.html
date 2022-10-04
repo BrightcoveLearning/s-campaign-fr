@@ -1,91 +1,65 @@
 <article class="bcls-article">
-    <h1>{{ page.title }}</h1>
-    <summary>{{ page.description }}</summary>
-    <section class="bcls-section">
-      <p>The Campaign module allows Video Cloud to synchronize viewing data from Brightcove Players to Marketo. Once in Marketo, this data can be used for segmentation, campaign logic, reports, lead scoring, and personalizing communications.</p>
-      <aside class="bcls-aside bcls-aside--information">Note: For information on how to configure the Campaign module for use with Marketo using the Munchkin ID, see <a href="/campaign/integrations/marketo/integrating-video-cloud-marketo-using-munchkin.html">Integrating Video Cloud with Marketo using Munchkin</a>.</aside>
-      <p>The Campaign module integration with Marketo consists of two main components:</p>
+    <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section">
+      <p>Le module Campaign permet à Video Cloud de synchroniser les données de visionnage des lecteurs Brightcove vers Marketo. Une fois dans Marketo, ces données peuvent être utilisées pour la segmentation, la logique de campagne, les rapports, le lead scoring et la personnalisation des communications.</p> <aside class="bcls-aside bcls-aside--information">Remarque: Pour plus d'informations sur la configuration du module Campaign pour une utilisation avec Marketo à l'aide de l'identifiant Munchkin, voir<a href="/campaign/integrations/marketo/integrating-video-cloud-marketo-using-munchkin.html"> Intégration de Video Cloud à Marketo à l'aide de Munchkin</a>.</aside>
+      <p>L'intégration du module Campaign à Marketo se compose de deux composants principaux:</p>
       <ul>
-        <li>A Brightcove Player plug-in to enable tracking of video views data</li>
-        <li>A Synchronization process to send tracking data from Video Cloud to Marketo</li>
-      </ul>
-    </section>
-    <section class="bcls-section">
-      <h2 id="requirements">Requirements</h2>
-      <p>To use the Campaign module with the Marketo REST integration, you must:</p>
+        <li>Un plug-in Brightcove Player pour permettre le suivi des données de visionnage des vidéos</li>
+        <li>Un processus de synchronisation pour envoyer les données de suivi de Video Cloud à Marketo</li>
+      </ul>  </section><section class="bcls-section">
+      <h2 id="requirements">Exigences</h2>
+      <p>Pour utiliser le module Campaign avec l'intégration REST Marketo, vous devez:</p>
       <ul>
-        <li>Create a role in Marketo which has access to all of the API permissions</li>
-        <li>Create a LaunchPoint Service</li>
-        <li>Have a Professional or Enterprise Video Cloud account</li>
-        <li>Have the Campaign module enabled for your account by submitting the required information in the initial splash screen that appears when you open the Campaign module</li>
-        <li>Click through the service agreement the first time you use the module</li>
-        <li>Use the Advanced Embed (in-page) publishing code when publishing your player; Standard Embed (iframe) publishing code will not work as the plugin will be running inside of an iframe and therefore will be unable to access any parent page URL parameters and may not get the correct cookies</li>
-      </ul>
-    </section>
-    <section class="bcls-section">
-      <h2 id="api">Creating an API-only user and LaunchPoint service</h2>
-      <p>Before you can make a call to the Marketo REST API, you need to create a new API role with access to all of the APIs, create an API-only user and then create a service that uniquely identifies your client application. The steps to complete these tasks are outlined in the <a href="https://developers.marketo.com/blog/quick-start-guide-for-marketo-rest-api/">Marketo documentation</a>.</p>
-    </section>
-    <section class="bcls-section">
-      <h2 id="setupConnection">Setting up the connection</h2>
-      <p>Once the configuration steps on the Marketo side have been completed, follow these steps to setup the connection between Video Cloud and Marketo.</p>
-      <h3 id="establishConnection">Establishing the connection between Video Cloud and Marketo</h3>
+        <li>Créez un rôle dans Marketo qui a accès à toutes les autorisations de l'API</li>
+        <li>Création d'un service LaunchPoint</li>
+        <li>Posséder un compte Professional ou Enterprise Video Cloud</li>
+        <li>Activez le module Campaign pour votre compte en soumettant les informations requises dans l'écran de démarrage initial qui apparaît lorsque vous ouvrez le module Campaign</li>
+        <li>Cliquez sur le contrat de service la première fois que vous utilisez le module</li>
+        <li>Utilisez le code de publication Advanced Embed (in-page) lors de la publication de votre lecteur&nbsp;; le code de publication Standard Embed (iframe) ne fonctionnera pas car le plugin s'exécutera à l'intérieur d'un iframe et ne pourra donc pas accéder aux paramètres d'URL de la page parente et risque de ne pas recevoir les bons cookies</li>
+      </ul>  </section><section class="bcls-section">
+      <h2 id="api">Création d'un utilisateur et d'un service LaunchPoint uniquement via API</h2>
+      <p>Avant de pouvoir appeler l'API REST Marketo, vous devez créer un nouveau rôle d'API avec accès à toutes les API, créer un utilisateur d'API uniquement, puis créer un service qui identifie de manière unique votre application cliente. Les étapes permettant d'effectuer ces tâches sont décrites dans la documentation<a href="https://developers.marketo.com/blog/quick-start-guide-for-marketo-rest-api/"> Marketo</a>.</p>  </section><section class="bcls-section">
+      <h2 id="setupConnection">Configuration de la connexion</h2>
+      <p>Une fois les étapes de configuration du côté de Marketo terminées, suivez ces étapes pour configurer la connexion entre Video Cloud et Marketo.</p>
+      <h3 id="establishConnection">Établir la connexion entre Video Cloud et Marketo</h3>
       <ol class="bcls-tasklist-restart">
-        <li>Open the <strong>Campaign</strong> module.</li>
-        <li>In the left navigation, click <strong>Data Connections</strong>.</li>
-        <li>Click <span class="button-blue">Add New Connection</span>.</li>
-        <li>Select <strong>Marketo</strong> as the integration.
-          <aside class="bcls-aside bcls-aside--information">Note: The integrations that are available are based upon your Video Cloud subscription.</aside>
+        <li>Ouvrez le<strong> module</strong> Campaign.</li>
+        <li>Dans la navigation de gauche, cliquez sur Connexions de<strong> données</strong>.</li>
+        <li>Cliquez sur<span class="button-blue"> Ajouter une nouvelle connexion</span>.</li>
+        <li>Sélectionnez<strong> Marketo</strong> comme intégration. <aside class="bcls-aside bcls-aside--information">Remarque: Les intégrations disponibles sont basées sur votre abonnement Video Cloud.</aside>
         </li>
-        <li>(Optional) Enter a <strong>Connection Name</strong>.
-          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Campaign setup" src="/assets/images/s-campaign-img/integrations/marketo/node16341-setup-section.png" /></figure>
+        <li>(Facultatif) Entrez un nom de<strong> connexion</strong>. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Configuration de la campagne" src="/assets/images/s-campaign-img/integrations/marketo/node16341-setup-section.png" /></figure>
         </li>
-        <li>Click <span class="button-blue">Connect</span>.</li>
-        <li>Select <strong>Standard (REST API) </strong>and then click <span class="button-blue">Save</span>.
-          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="marketo integration type" src="/assets/images/s-campaign-img/integrations/marketo/node16341-munchkin-rest.png" /></figure>
-          <aside class="bcls-aside bcls-aside--information">Note: For information on using a Munchkin integration, see <a href="/campaign/integrations/marketo/integrating-video-cloud-marketo-using-munchkin.html">Integrating Video Cloud with Marketo using Munchkin</a>.</aside>
-          <p>You will required to paste in several values from your Marketo account. Note that you must be logged in as a Marketo administrator to complete the following steps. For the following steps, click the empty link and provide the appropriate value:</p>
+        <li>Cliquez sur<span class="button-blue"> Connecter</span>.</li>
+        <li>Sélectionnez<strong> Standard (API REST),</strong> puis cliquez sur<span class="button-blue"> Enregistrer</span>. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="type d'intégration marketo" src="/assets/images/s-campaign-img/integrations/marketo/node16341-munchkin-rest.png" /></figure> <aside class="bcls-aside bcls-aside--information">Remarque: Pour plus d'informations sur l'utilisation d'une intégration Munchkin, voir<a href="/campaign/integrations/marketo/integrating-video-cloud-marketo-using-munchkin.html"> Intégration de Video Cloud à Marketo à l'aide de Munchkin</a>.</aside>
+          <p>Vous devrez coller plusieurs valeurs de votre compte Marketo. Notez que vous devez être connecté en tant qu'administrateur Marketo pour effectuer les étapes suivantes. Pour les étapes suivantes, cliquez sur le lien vide et saisissez la valeur appropriée:</p>
         </li>
-        <li><strong>Marketo Account ID</strong> - To get this value, in Marketo click <strong>Admin</strong> &gt; <strong>Integration</strong> &gt; <strong>Munchkin</strong>.</li>
-        <li><strong>Marketo REST API Endpoint URL</strong> - To get this value, in Marketo click <strong>Admin</strong> &gt; <strong>Integration </strong>&gt;<strong> Web Services</strong>.</li>
-        <li><strong>Marketo REST API Identity URL</strong> - To get this value, in Marketo click <strong>Admin</strong> &gt;<strong> Integration </strong>&gt;<strong> Web Services</strong>.</li>
-        <li><strong>Marketo LaunchPoint Client ID</strong> - To get this value, in Marketo click <strong>Admin</strong> &gt; <strong>Integration </strong>&gt;<strong> LaunchPoint</strong> and then click the <strong>View Details</strong> link for the LaunchPoint you created earlier as part of this setup.</li>
-        <li><strong>Marketo LaunchPoint Client Secret</strong> - To get this value, in Marketo click <strong>Admin</strong> &gt;<strong> LaunchPoint</strong> and then click the <strong>View Details</strong> link for the LaunchPoint you created earlier as part of this setup.</li>
-        <li>Click <span class="button-blue">Setup</span>.</li>
+        <li><strong>ID de compte Marketo</strong> - Pour obtenir cette valeur, dans Marketo, cliquez sur<strong> Admin </strong><strong>&gt;</strong> Intégration &gt;<strong> Munchkin</strong>.</li>
+        <li><strong>URL du point de terminaison de l'API REST Marketo</strong> - Pour obtenir cette valeur, dans Marketo, cliquez sur<strong> Admin </strong><strong>&gt;</strong> Intégration &gt; Services<strong> Web</strong>.</li>
+        <li><strong>URL d'identité de l'API REST Marketo</strong> - Pour obtenir cette valeur, dans Marketo, cliquez sur<strong> Admin </strong><strong>&gt;</strong> Intégration &gt; Services<strong> Web</strong>.</li>
+        <li><strong>ID client Marketo LaunchPoint</strong> - Pour obtenir cette valeur, dans Marketo, cliquez sur<strong> Admin</strong> &gt;<strong> Intégration</strong> &gt;<strong> LaunchPoint,</strong> puis cliquez sur le<strong> lien</strong> Afficher les détails du LaunchPoint que vous avez créé précédemment dans le cadre de cette configuration.</li>
+        <li><strong>Secret client Marketo LaunchPoint</strong> - Pour obtenir cette valeur, dans Marketo, cliquez sur<strong> Admin</strong> &gt;<strong> LaunchPoint,</strong> puis cliquez sur<strong> Afficher les détails </strong>pour le LaunchPoint que vous avez créé précédemment dans le cadre de cette configuration.</li>
+        <li>Cliquez sur<span class="button-blue"> Configuration</span>.</li>
       </ol>
-      <p>The Video Cloud connection to Marketo is now set up and ready to use.</p>
-      <aside class="bcls-aside bcls-aside--information">Note: If the correct permissions are not assigned to the Marketo user, an error will be displayed in Studio. Check your permissions and then try again.</aside>
-    </section>
-    <section class="bcls-section">
-      <h2 id="configure">Configuring the integration</h2>
-      <p>Once the Video Cloud to Marketo connection has been made, you can configure the integration.</p>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="connected options" src="/assets/images/s-campaign-img/integrations/marketo/node16341-connected-options.png" /></figure>
+      <p>La connexion Video Cloud à Marketo est désormais configurée et prête à être utilisée.</p> <aside class="bcls-aside bcls-aside--information">Remarque: Si les autorisations correctes ne sont pas attribuées à l'utilisateur Marketo, une erreur s'affichera dans Studio. Vérifiez vos autorisations, puis réessayez.</aside> </section> <section class="bcls-section">
+      <h2 id="configure">Configuration de l'intégration</h2>
+      <p>Une fois la connexion entre Video Cloud et Marketo établie, vous pouvez configurer l'intégration.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="options connectées" src="/assets/images/s-campaign-img/integrations/marketo/node16341-connected-options.png" /></figure>
       <ol class="bcls-tasklist-restart">
-        <li>By default, the <strong>Connection Status</strong> will be <strong>Enabled</strong>. The <strong>Connection Status</strong> determines if Video Cloud video engagement data is sent to Marketo.
+        <li>Par défaut, l'état de la<strong> connexion</strong> sera<strong> Activé</strong>. L'état de la<strong> connexion</strong> détermine si les données d'engagement vidéo de Video Cloud sont envoyées à Marketo.
           <ul>
-            <li><strong>Enabled</strong> - Data is collected and will be sent to Marketo</li>
-            <li><strong>Disabled</strong> - No data is collected (integration is disabled)</li>
+            <li><strong>Activé</strong> - Les données sont collectées et seront envoyées à Marketo</li>
+            <li><strong>Désactivé</strong> - Aucune donnée n'est collectée (l'intégration est désactivée)</li>
           </ul>
         </li>
-        <li>By default, <strong>Track Data for Unknown Viewers</strong> will be set to <strong>Disabled</strong>. Enabling this option will track data for unknown users. Data will be retained based upon the selected data retention policy. If data retention is set to <strong>No retention</strong>, this field is not displayed.</li>
-        <li>Select a data retention policy. The data retention policy determines whether, and for how long, the lead information data that you capture will be retained in your Video Cloud account as well as in Marketo. Data collected can optionally be retained in Video Cloud for up to 1 month. Retaining data in Video Cloud allows you to recover from interrupted synchronizations. However, <strong>you should adjust the retention settings according to your privacy policy</strong> - it is not required to retain any user data in Video Cloud. Data will be deleted after the data retention period.
-          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="data retention options" src="/assets/images/s-campaign-img/integrations/marketo/node16341-data-retention-options.png" /></figure>
+        <li>Par défaut,<strong> Track Data for Unknown Viewers</strong> sera défini sur<strong> Désactivé</strong>. L'activation de cette option permet de suivre les données des utilisateurs inconnus. Les données seront conservées conformément à la politique de conservation des données sélectionnée. Si la conservation des données est définie sur<strong> Aucune conservation</strong>, ce champ n'est pas affiché.</li>
+        <li>Sélectionnez une règle de conservation des données. La politique de conservation des données détermine si, et pendant combien de temps, les données d'informations sur les prospects que vous collectez seront conservées dans votre compte Video Cloud ainsi que dans Marketo. Les données collectées peuvent éventuellement être conservées dans Video Cloud pendant un mois maximum. La conservation des données dans Video Cloud vous permet de récupérer les données après des synchronisations interrompues. Cependant,<strong> vous devez ajuster les paramètres de conservation conformément à votre politique</strong> de confidentialité. Il n'est pas nécessaire de conserver les données utilisateur dans Video Cloud. Les données seront supprimées après la période de conservation des données. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="options de conservation des données" src="/assets/images/s-campaign-img/integrations/marketo/node16341-data-retention-options.png" /></figure>
         </li>
       </ol>
-      <p>To remove the integration with Marketo, click <span class="button-red-text-border">Disconnect</span>.</p>
-    </section>
-    <section class="bcls-section">
-      <h2 id="player">Creating a Campaign-enabled player</h2>
-      <p>Video engagement data will only be sent to Marketo when you are using a Campaign-enabled video player. For information on creating a Campaign-enabled Brightcove Player, see <a href="/campaign/general/creating-campaign-enabled-player.html">Creating a Campaign-enabled Player</a>.</p>
-    </section>
-    <section class="bcls-section">
-      <h2 id="identify">Identifying viewers</h2>
-      <p>Campaign-enabled players with a Marketo integration will refer to the Munchkin cookie (_mkto_trk) which is created in the user's browser. This value is captured in the Campaign module’s viewing data and is used to synchronize viewing data to Marketo.</p>
-      <p>The user's email address can be passed in a <strong>bcemail</strong> URL parameter on the page that is displaying the video. For more information and an example, see <a href="/campaign/general/how-campaign-module-identifies-viewers.html#email">How the Campaign Module Identifies Viewers</a>.</p>
-    </section>
-    <section class="bcls-section">
-      <h2 id="verify">Verifying the integration</h2>
-      <p>When the integration is configured, test the integration to confirm that video view data is being sent to Marketo. For information on verifying the integration, see <a href="/campaign/integrations/marketo/marketo-rest-integration-testing-guide.html">Marketo REST Integration Testing Guide</a>.</p>
-    </section>
-  </article>
-  
+      <p>Pour supprimer l'intégration avec Marketo, cliquez sur<span class="button-red-text-border"> Déconnecter</span>.</p>  </section><section class="bcls-section">
+      <h2 id="player">Création d'un lecteur compatible avec la campagne</h2>
+      <p>Les données d'engagement vidéo ne seront envoyées à Marketo que lorsque vous utilisez un lecteur vidéo compatible avec la campagne. Pour plus d'informations sur la création d'un lecteur Brightcove compatible avec la campagne, consultez la section<a href="/campaign/general/creating-campaign-enabled-player.html"> Création d'un lecteur compatible avec la campagne</a>.</p>  </section><section class="bcls-section">
+      <h2 id="identify">Identifier les spectateurs</h2>
+      <p>Les lecteur
+s ayant activé la campagne avec une intégration Marketo feront référence au cookie Munchkin (_mkto_trk) créé dans le navigateur de l'utilisateur. Cette valeur est capturée dans les données d'affichage du module Campaign et est utilisée pour synchroniser les données de visionnage avec Marketo.™</p>
+      <p>L'adresse e-mail de l'utilisateur peut être transmise dans un paramètre d'<strong>URL</strong> bcemail sur la page qui affiche la vidéo. Pour plus d'informations et un exemple, consultez<a href="/campaign/general/how-campaign-module-identifies-viewers.html#email"> Comment le module Campaign identifie les spectateurs</a>.</p>  </section><section class="bcls-section">
+      <h2 id="verify">Vérification de l'intégration</h2>
+      <p>Lorsque l'intégration est configurée, testez-la pour confirmer que les données de visionnage de la vidéo sont envoyées à Marketo. Pour plus d'informations sur la vérification de l'intégration, consultez le<a href="/campaign/integrations/marketo/marketo-rest-integration-testing-guide.html"> Marketo REST Integration Testing Guide</a>.</p>   </section></article>

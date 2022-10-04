@@ -1,59 +1,56 @@
 <article class="bcls-article">
-    <h1>{{ page.title }}</h1>
-    <summary>{{ page.description }}</summary>
-    <section class="bcls-section">
-      <p>Video engagement data will only be recorded when video content is viewed inside of a Campaign-enabled Brightcove Player. There are two ways to create a Campaign-enabled player:</p>
+    <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section">
+      <p>Les données d'engagement vidéo ne seront enregistrées que lorsque le contenu vidéo est visionné dans un lecteur Brightcove compatible avec la campagne. Il existe deux manières de créer un lecteur compatible avec la campagne:</p>
       <ul>
-        <li><a href="#newplayer">Create a new player using the Campaign module</a></li>
-        <li><a href="#existingplayer">Enable Camapaign on an existing player</a></li>
-      </ul>
-      <aside class="bcls-aside bcls-aside--information language-editable">Note that regardless of how you create your Campaign enabled player, you must use the <a href="/publish/choosing-correct-embed-code.html">Advanced</a> code when you embed it in a page.</aside>
-    </section>
-    <section class="bcls-section">
-      <h2 id="newplayer">Creating a new player using the Campaign module</h2>
-      <p>Before creating a Campaign-enabled player using the Campaign module, the Campaign module should be configured with at least one data connection:</p>
+        <li><a href="#newplayer">Créer un nouveau lecteur
+ à l'aide du module Campaign</a></li>
+        <li><a href="#existingplayer">Activer la campagne sur un lecteur
+ existant</a></li>
+      </ul> <aside class="bcls-aside bcls-aside--information language-editable">Notez que quelle que soit la manière dont vous créez votre lecteur compatible avec la campagne, vous devez utiliser le<a href="/publish/choosing-correct-embed-code.html"> code</a> Avancé lorsque vous l'intégrez à une page.</aside> </section> <section class="bcls-section">
+      <h2 id="newplayer">Créer un nouveau lecteur
+ à l'aide du module Campaign</h2>
+      <p>Avant de créer un lecteur compatible avec la campagne à l'aide du module Campaign, le module Campaign doit être configuré avec au moins une connexion de données:</p>
       <ul>
         <li><a href="/campaign/integrations/eloqua/integrating-video-cloud-oracle-eloqua.html">Eloqua</a></li>
         <li><a href="/campaign/integrations/marketo/integrating-video-cloud-marketo-using-munchkin.html">Marketo (Munchkin)</a></li>
-        <li><a href="/campaign/integrations/marketo/integrating-video-cloud-marketo-using-rest-apis.html">Marketo (REST APIs)</a></li>
+        <li><a href="/campaign/integrations/marketo/integrating-video-cloud-marketo-using-rest-apis.html">Marketo (API REST)</a></li>
         <li><a href="/campaign/integrations/salesforce/integrating-video-cloud-salesforce.html">Salesforce</a></li>
-        <li><a href="/campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-rest-apis.html">HubSpot (REST APIs)</a></li>
-        <li><a href="/campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-client-side-apis.html">HubSpot (Client-Side APIs)</a></li>
+        <li><a href="/campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-rest-apis.html">HubSpot (API REST)</a></li>
+        <li><a href="/campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-client-side-apis.html">HubSpot (API côté client)</a></li>
         <li><a href="/campaign/integrations/non-map/integrating-campaign-single-sign.html">SSO</a></li>
-        <li><a href="/campaign/integrations/non-map/creating-custom-integrations-campaign-module.html">Custom integration</a></li>
+        <li><a href="/campaign/integrations/non-map/creating-custom-integrations-campaign-module.html">Intégration personnalisée</a></li>
       </ul>
-      <p>Note that <a href="/campaign/integrations/non-map/using-campaign-module-track-viewers.html">Campaign Tracking</a> is provided by default. To create a Campaign-enabled player using the Campaign module, follow these steps.</p>
+      <p>Notez que le suivi des<a href="/campaign/integrations/non-map/using-campaign-module-track-viewers.html"> campagnes</a> est fourni par défaut. Pour créer un lecteur compatible avec la campagne à l'aide du module Campagne, procédez comme suit.</p>
       <ol class="bcls-tasklist-restart">
-        <li>Open the <strong>Campaign</strong> module.</li>
-        <li>In the left navigation, click <strong>Campaign Players</strong>.</li>
-        <li>Click <span class="button-blue">Create Player</span>. A new Campaign-enabled player will be created and appear in the list of players.
-          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="new player" src="/assets/images/s-campaign-img/general/node16419-new-player.png" /></figure>
+        <li>Ouvrez le<strong> module</strong> Campaign.</li>
+        <li>Dans le menu de navigation de gauche, cliquez sur Joueurs de<strong> campagne</strong>.</li>
+        <li>Cliquez sur<span class="button-blue"> Create Player</span>. Un nouveau lecteur
+ compatible avec la campagne sera créé et apparaîtra dans la liste des lecteur
+s. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="nouveau lecteur
+" src="/assets/images/s-campaign-img/general/node16419-new-player.png" /></figure>
         </li>
-        <li>Using the <strong>Connect To</strong> dropdown, select the data connection that the player will use.
-          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="select integration" src="/assets/images/s-campaign-img/general/node16419-select-integration.png" /></figure>
+        <li>Dans la<strong> liste déroulante</strong> Se connecter à, sélectionnez la connexion de données que le lecteur utilisera. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="sélectionnez l'intégration" src="/assets/images/s-campaign-img/general/node16419-select-integration.png" /></figure>
         </li>
-        <li><strong>(Optional)</strong> Using the <strong>Lead Form</strong> dropdown, select the <a href="/campaign/general/creating-campaign-lead-form.html">lead form</a> that the player will use.</li>
-      </ol>
-    </section>
-    <section class="bcls-section">
-      <h2 id="existingplayer">Enabling Campaign on an existing player</h2>
-      <p>To Campaign-enable an existing player, follow these steps.</p>
+        <li><strong>(Facultatif)</strong> Dans le<strong> menu déroulant</strong> Lead Form, sélectionnez le formulaire de<a href="/campaign/general/creating-campaign-lead-form.html"> lead</a> que le lecteur
+ utilisera.</li>
+      </ol>  </section><section class="bcls-section">
+      <h2 id="existingplayer">Activation de la campagne sur un lecteur
+ existant</h2>
+      <p>Pour activer la campagne d'un lecteur existant, procédez comme suit.</p>
       <ol class="bcls-tasklist-restart">
-        <li>Open the <strong>Players</strong> module.</li>
-        <li>Click on a player name to open the player properties.</li>
-        <li>Click <strong>Campaign</strong> in the left navigation menu.</li>
-        <li>Check the <strong>Enable Campaign</strong> option.</li>
-        <li>Use the <strong>Connect To</strong> dropdown to select a Campaign connection.</li>
-        <li>(Optional) Use the <strong>Lead Form</strong> dropdown to select a <a href="/campaign/general/creating-campaign-lead-form.html">lead form</a> to use.
-          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="unpublished changes message" src="/assets/images/s-campaign-img/general/node16419-campaign-props.png" /></figure>
+        <li>Ouvrez le<strong> module</strong> Players.</li>
+        <li>Cliquez sur le nom d'un lecteur
+ pour ouvrir ses propriétés.</li>
+        <li>Cliquez sur<strong> Campagne</strong> dans le menu de navigation de gauche.</li>
+        <li>Cochez l'<strong>option</strong> Activer la campagne.</li>
+        <li>Utilisez la<strong> liste déroulante</strong> Se connecter à pour sélectionner une connexion à Campaign.</li>
+        <li>(Facultatif) Utilisez le<strong> menu déroulant</strong> Lead Form pour sélectionner un<a href="/campaign/general/creating-campaign-lead-form.html"> formulaire de</a> prospect à utiliser. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="message de modifications non publiées" src="/assets/images/s-campaign-img/general/node16419-campaign-props.png" /></figure>
         </li>
-        <li>Click <span class="button-blue">Save</span>. A message will appear indicating that you have unpublished changes.
-          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="unpublished changes message" src="/assets/images/s-campaign-img/general/node16419-unpublished-changes.png" /></figure>
+        <li>Cliquez sur<span class="button-blue"> Enregistrer</span>. Un message s'affiche pour vous indiquer que vous avez des modifications non publiées. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="message de modifications non publiées" src="/assets/images/s-campaign-img/general/node16419-unpublished-changes.png" /></figure>
         </li>
-        <li>Click <span class="button-blue">Publish &amp; Embed</span> and then <span class="button-blue">Publish Changes</span> to publish the change to the player.</li>
-        <li>Return to the Campaign module. Click <strong>Campaign Players </strong> in the left navigation.</li>
-        <li>Confirm that the player appears in the list of Campaign players.</li>
-      </ol>
-    </section>
-  </article>
-  
+        <li>Cliquez sur<span class="button-blue"> Publier</span> et intégrer, puis sur<span class="button-blue"> Publier</span> les modifications pour publier la modification sur le lecteur.</li>
+        <li>Revenez au module Campaign. Cliquez sur Joueurs de<strong> campagne</strong> dans le menu de navigation de gauche.</li>
+        <li>Vérifiez que le lecteur
+ apparaît dans la liste des lecteur
+s de la campagne.</li>
+      </ol>   </section></article>

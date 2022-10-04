@@ -1,131 +1,123 @@
 <article class="bcls-article">
-    <h1>{{ page.title }}</h1>
-    <summary>{{ page.description }}</summary>
-    <section class="bcls-section">
-      <p>Brightcove Campaign will deliver a set of video viewing data to specific fields in your integrated platform. Below is an example of those fields and a description of what the data is that will populate each field</p>
-    </section>
-    <section class="bcls-section">
-      <h2 id="standard">Standard fields</h2>
-      <p>These fields will always be populated by Brightcove Campaign.</p>
+    <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section">
+      <p>Brightcove Campaign fournira un ensemble de données de visionnage de vidéos à des champs spécifiques de votre plate-forme intégrée. Vous trouverez ci-dessous un exemple de ces champs et une description des données qui rempliront chaque champ.</p>  </section><section class="bcls-section">
+      <h2 id="standard">Champs standard</h2>
+      <p>Ces champs seront toujours renseignés par Brightcove Campaign.</p>
       <table width="99%" class="bcls-table">
         <thead class="bcls-table__head">
           <tr>
-            <th width="12%" style="width: 24%;">Field</th>
+            <th width="12%" style="width: 24%;">terrain</th>
             <th width="88%" style="width: 33%;"><strong>Description</strong></th>
           </tr>
         </thead>
         <tbody class="bcls-table__body">
           <tr>
             <td>video_id</td>
-            <td valign="top"><p>The ID of the Brightcove video associated with the viewing event</p></td>
+            <td valign="top"><p>ID de la vidéo Brightcove associée à l'événement de visionnage</p></td>
           </tr>
           <tr>
-            <td>video_name</td>
-            <td valign="top"><p>The name of the video in Video Cloud</p></td>
+            <td>nom_vidéo</td>
+            <td valign="top"><p>Le nom de la vidéo dans Video Cloud</p></td>
           </tr>
           <tr>
             <td>tracking_id</td>
-            <td valign="top">You can add a <a href="/campaign/integrations/non-map/creating-custom-integrations-campaign-module.html#trackingid">custom tracking ID</a> to a URL</td>
+            <td valign="top">Vous pouvez ajouter un identifiant de suivi<a href="/campaign/integrations/non-map/creating-custom-integrations-campaign-module.html#trackingid"> personnalisé</a> à une URL</td>
           </tr>
           <tr>
             <td>external_id</td>
-            <td valign="top">The Global User ID (GUID) used to identify the user</td>
+            <td valign="top">Le GUID (Global User ID) utilisé pour identifier l'utilisateur</td>
           </tr>
           <tr>
             <td>player_id</td>
-            <td valign="top">The ID of the Brightcove Player that created the view event</td>
+            <td valign="top">ID du lecteur Brightcove qui a créé l'événement View</td>
           </tr>
           <tr>
             <td>page_url</td>
-            <td valign="top">The URL of the page where the video was viewed</td>
+            <td valign="top">L'URL de la page sur laquelle la vidéo a été visionnée</td>
           </tr>
           <tr>
-            <td>watched</td>
-            <td valign="top">Percent watched - How far down the timeline they watched</td>
+            <td>regardait</td>
+            <td valign="top">Pourcentage regardé: jusqu'où ils ont regardé la chronologie</td>
           </tr>
           <tr>
             <td>time_watched</td>
-            <td valign="top">Seconds of the video watched - The total amount of time they actually spent with that video</td>
+            <td valign="top">Secondes de la vidéo regardée: le temps total qu'ils ont réellement passé sur cette vidéo</td>
           </tr>
           <tr>
             <td>created_at</td>
-            <td valign="top">Creation date</td>
+            <td valign="top">Date de création</td>
           </tr>
           <tr>
             <td>updated_at</td>
-            <td valign="top">Last updated date</td>
+            <td valign="top">Dernière mise à jour</td>
           </tr>
           <tr>
             <td>is_synced</td>
-            <td valign="top">A boolean denoting whether or not the view event has been synchronized to the third party platform.</td>
+            <td valign="top">Valeur booléenne indiquant si l'événement view a été synchronisé ou non avec la plate-forme tierce.</td>
           </tr>
         </tbody>
-      </table>
-    </section>
-    <section class="bcls-section">
-      <h2 id="additional">Additional fields</h2>
-      <p>These fields are not automatically populated. They are used to <a href="/campaign/general/using-custom-metrics-and-events.html">track additional custom data</a>. By default, they are configured to capture interactivity from Gallery <a href="https://gallery.support.brightcove.com/experiences/inpage/adding-interactions-page-experience.html">In-Page experiences</a>. If you are not using interactivity, these fields will be blank.</p>
+      </table>  </section><section class="bcls-section">
+      <h2 id="additional">Champs supplémentaires</h2>
+      <p>Ces champs ne sont pas renseignés automatiquement. Ils sont utilisés pour<a href="/campaign/general/using-custom-metrics-and-events.html"> suivre des données personnalisées supplémentaires</a>. Par défaut, ils sont configurés pour capturer l'interactivité des expériences<a href="https://gallery.support.brightcove.com/experiences/inpage/adding-interactions-page-experience.html"> in-page Gallery</a>. Si vous n'utilisez pas l'interactivité, ces champs seront vides.</p>
       <table width="99%" class="bcls-table">
         <thead class="bcls-table__head">
           <tr>
-            <th width="12%" style="width: 24%;">Field</th>
+            <th width="12%" style="width: 24%;">terrain</th>
             <th width="88%" style="width: 33%;"><strong>Description</strong></th>
           </tr>
         </thead>
         <tbody class="bcls-table__body">
           <tr>
             <td>event_1, event_2, event_3</td>
-            <td valign="top"><p>Custom events</p></td>
+            <td valign="top"><p>Événements personnalisés</p></td>
           </tr>
           <tr>
             <td>metric_1, metric_2, metric_3</td>
-            <td valign="top"><p>Custom metrics</p></td>
+            <td valign="top"><p>Métriques personnalisées</p></td>
           </tr>
           <tr>
-            <td><strong>UTM fields</strong> - utmSource, utmMedium, utmCampaign, utmTerm and utmContent</td>
-            <td valign="top">For information on working with UTM fields see <a href="/campaign/general/working-utm-fields-campaign-module.html">Working with UTM Fields in the Campaign Module</a>.</td>
+            <td><strong>Champs UTM</strong> - UTMSource, UTMMedium, UTMCampaign, UTMTerm et UTMContent</td>
+            <td valign="top">Pour plus d'informations sur l'utilisation des champs UTM, voir<a href="/campaign/general/working-utm-fields-campaign-module.html"> Utilisation des champs UTM dans le module Campaign</a>.</td>
           </tr>
         </tbody>
-      </table>
-    </section>
-    <section class="bcls-section">
-      <h2 id="custom">Optional field tracking</h2>
-      <p data-renderer-start-pos="758">You may want to use this feature if you want to send additional data to a third-party MAP without the use of additional JavaScript to leverage Campaign's <a href="/campaign/general/using-custom-metrics-and-events.html">client-side API for custom metric tracking</u></a>.</p>
-      <p data-renderer-start-pos="958">Once enabled, every event call logged from a Campaign-enabled player will also include the key/value pairs for the video metadata requested.</p>
-      <h3>Important Caveats</h3>
+      </table>  </section><section class="bcls-section">
+      <h2 id="custom">Suivi des champs en option</h2>
+      <p data-renderer-start-pos="758">Vous pouvez utiliser cette fonctionnalité si vous souhaitez envoyer des données supplémentaires à un MAP tiers sans utiliser de JavaScript supplémentaire pour tirer parti de l'API<a href="/campaign/general/using-custom-metrics-and-events.html"> côté client de Campaign pour un suivi personnalisé des métriques</a>.</p>
+      <p data-renderer-start-pos="958">Une fois activé, chaque appel d'événement enregistré à partir d'un lecteur compatible avec la campagne inclura également les paires clé/valeur pour les métadonnées vidéo demandées.</p>
+      <h3>Mises en garde importantes</h3>
       <ul>
-        <li>This feature is currently only supported for Eloqua integrations (it's possible that more third-party integrations could be supported in the future)</li>
-        <li>This feature can <strong>only</strong> be used for tracking the following types of metadata:
+        <li>Cette fonctionnalité n'est actuellement prise en charge que pour les intégrations Eloqua (il est possible que d'autres intégrations tierces soient prises en charge à l'avenir)</li>
+        <li>Cette fonctionnalité<strong> ne peut</strong> être utilisée que pour suivre les types de métadonnées suivants:
           <ul>
-            <li>Video Reference ID</li>
-            <li>A comma-delimited list of video tags</li>
-            <li>Video custom metadata fields</li>
+            <li>ID de référence vidéo</li>
+            <li>Une liste de balises vidéo délimitées par des virgules</li>
+            <li>Champs de métadonnées personnalisés des vidéos</li>
           </ul>
         </li>
-        <li>Up to 3 values can be set up for this type of tracking</li>
-        <li>Once this setup has been completed, Brightcove is unable to remove or modify the custom objects sent to your third-party MAP. In other words, this is a one-time set-up which cannot be reversed at this time.</li>
-        <li>This data will <strong>not</strong> be available through the Campaign module</li>
-        <li>This data will <strong>not</strong> be available through the Audience API</li>
-        <li>This data does appear in exported View Events reports</li>
+        <li>Jusqu'à 3 valeurs peuvent être définies pour ce type de suivi</li>
+        <li>Une fois cette configuration terminée, Brightcove n'est pas en mesure de supprimer ou de modifier les objets personnalisés envoyés à votre MAP tiers. En d'autres termes, il s'agit d'une configuration unique qui ne peut pas être inversée pour le moment.</li>
+        <li>Ces données<strong> ne</strong> seront pas disponibles via le module Campaign</li>
+        <li>Ces données<strong> ne</strong> seront pas disponibles via l'API Audience</li>
+        <li>Ces données apparaissent dans les rapports View Events exportés</li>
       </ul>
-      <h3>How to request this feature</h3>
-      <p>To set this up please <a href="https://supportportal.brightcove.com/">contact Brightcove Support</a> and request that you'd like to &quot;<strong>enable a MAP integration for optional field tracking</strong>&quot;. Please review the above caveats and include the following in your request:</p>
+      <h3>Comment demander cette fonctionnalité</h3>
+      <p>Pour configurer cela, veuillez<a href="https://supportportal.brightcove.com/"> contacter le support Brightcove</a> et demander que vous souhaitiez «<strong>&nbsp;activer une intégration MAP pour le suivi des champs en option</strong>-fr/. Veuillez passer en revue les mises en garde ci-dessus et inclure les éléments suivants dans votre demande:</p>
       <ul>
-        <li>Your Brightcove Account ID</li>
-        <li>The ID of the Eloqua data integration you'd like to enable this on
+        <li>Votre identifiant de compte Brightcove</li>
+        <li>L'ID de l'intégration de données Eloqua sur laquelle vous souhaitez activer cette fonctionnalité
           <ul>
-            <li>Optional fields are set up on an integration-by-integration basis. Since it's possible to have more than one integration on your account, Brightcove will need to know the ID of the integration it should be enabled on.</li>
+            <li>Les champs facultatifs sont configurés intégration par intégration. Comme il est possible d'avoir plusieurs intégrations sur votre compte, Brightcove devra connaître l'ID de l'intégration sur laquelle elle doit être activée.</li>
           </ul>
         </li>
-        <li>Up to 3 fields you&rsquo;d like to enable. This must be one or a combination of the following:
+        <li>Vous souhaitez activer jusqu'à 3 champs. Il doit s'agir d'un ou d'une combinaison des éléments suivants:
           <ul>
-            <li>Reference ID</li>
-            <li>Tags</li>
-            <li>Internal name of an existing video custom metadata field on your account</li>
+            <li>ID de référence</li>
+            <li>Balises</li>
+            <li>Nom interne d'un champ de métadonnées personnalisées de vidéo existant sur votre compte</li>
           </ul>
         </li>
       </ul>
-      <p>Once you provide this request to Customer Support, no further work is required on your end to enable this in Eloqua. After Customer Support confirms that the optional fields have been enabled and View Events have been sync'd, you should start to see these additional fields being automatically be added to your BrightcoveVideoView Custom Object in Eloqua.</p>
+      <p>Une fois que vous avez transmis cette demande au service clientèle, aucun autre travail n'est requis de votre part pour l'activer dans Eloqua. Une fois que le support client a confirmé que les champs facultatifs ont été activés et que View Events a été synchronisé, vous devriez commencer à voir ces champs supplémentaires être automatiquement ajoutés à votre objet personnalisé BrightCoveVideoView dans Eloqua.</p>
       <!--<table width="99%" class="bcls-table">
         <thead class="bcls-table__head">
           <tr>
@@ -139,7 +131,4 @@
             <td valign="top"><p>Custom events</p></td>
           </tr>
         </tbody>
-      </table>--> 
-    </section>
-  </article>
-  
+      </table>-->   </section></article>

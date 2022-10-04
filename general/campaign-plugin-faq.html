@@ -1,20 +1,16 @@
 <article class="bcls-article">
-  <h1>{{ page.title }}</h1>
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    <h2 id="faq">Frequently asked questions</h2>
+  <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <h2 id="faq">Foire aux questions</h2>
     <dl>
-      <dt class="bcls-question">Does the bcMapPlugin work when a lead form attached to a player, but no data connection is added?</dt>
-      <dd>No. The plugin expects a data connection to be added to the player. If a lead form is added to the player without a data connection, then the plugin will detect an incomplete setup and exit out of its initialization before the lead form has a chance to display.</dd>
-      <dt class="bcls-question">Does bcMapPlugin work when a lead form is not attached to a player?</dt>
-      <dd>Yes, the plugin will initialize when a data connection has been added to a player.
-        The following data connections will require that T<strong>rack Data for Unknown Viewers</strong> be enabled before the player can send its event tracking beacons. Otherwise, there will be no lead form to detect viewers, everyone will be unknown, and that data will not be tracked.
+      <dt class="bcls-question">Le BCMapPlugin fonctionne-t-il lorsqu'un formulaire de prospect est attaché à un lecteur, mais qu'aucune connexion de données n'est ajoutée&nbsp;?</dt>
+      <dd>Non. Le plugin s'attend à ce qu'une connexion de données soit ajoutée au lecteur. Si un formulaire de prospect est ajouté au lecteur sans connexion de données, le plugin détectera une configuration incomplète et quittera son initialisation avant que le formulaire de prospect n'ait une chance de s'afficher.</dd>
+      <dt class="bcls-question">Est-ce que BCMapPlugin fonctionne lorsqu'aucun formulaire de prospect n'est associé à un lecteur&nbsp;?</dt>
+      <dd>Oui, le plugin s'initialise lorsqu'une connexion de données a été ajoutée à un lecteur. Les connexions de données suivantes nécessiteront l'activation des données de suivi T<strong> rack pour les visionneuses</strong> inconnues avant que le lecteur
+ puisse envoyer ses balises de suivi d'événements. Sinon, il n'y aura pas de formulaire de prospect pour détecter les spectateurs, tout le monde sera inconnu et ces données ne seront pas suivies.
         <ul>
-          <li>Salesforce / Pardot</li>
+          <li>Salesforce/Pardot</li>
           <li>Eloqua</li>
-          <li>Campaign</li>
+          <li>Campagne</li>
         </ul>
       </dd>
-    </dl>
-  </section>
-</article>
+    </dl>   </section></article>
